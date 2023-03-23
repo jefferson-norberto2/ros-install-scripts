@@ -4,17 +4,17 @@ echo "Executado arquivo bash"
 
 sudo apt update
 
-sudo apt install lsb-release # if you haven't already installed lsb-release
+sudo apt install lsb-release -y # if you haven't already installed lsb-release
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
-sudo apt install curl gnupg # if you haven't already installed curl or gnupg
+sudo apt install curl gnupg -y # if you haven't already installed curl or gnupg
 
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 sudo apt-get update
 
-sudo apt-get install git wget ipython3 python3-rosinstall ros-noetic-desktop-full python3-catkin-tools python3-rosdep python-is-python3 ros-noetic-actionlib-tools ros-noetic-moveit-commander
+sudo apt-get install git wget ipython3 python3-rosinstall ros-noetic-desktop-full python3-catkin-tools python3-rosdep python-is-python3 ros-noetic-actionlib-tools ros-noetic-moveit-commander -y
 
 source /opt/ros/noetic/setup.bash
 
